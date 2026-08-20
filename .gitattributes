@@ -1,0 +1,12 @@
+# Normalize line endings for text files in the repository.
+# Git decides what is text; anything explicitly marked binary below is exempt.
+* text=auto
+
+# Unreal Engine binary assets.
+# These must never be treated as text: line-ending conversion would corrupt them,
+# and textual diff/merge on them is meaningless.
+*.uasset binary
+*.umap binary
+
+# Image source art committed to the repository.
+*.png binary
